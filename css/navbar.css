@@ -196,35 +196,6 @@
   padding: 9px 22px;
 }
 
-/* ── Ticker Pill ───────────────────────────────────────── */
-.nav-ticker-pill {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--gold-glass);
-  border: 1px solid var(--border);
-  border-radius: 50px;
-  padding: 5px 12px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--gold);
-  letter-spacing: 0.04em;
-  cursor: default;
-}
-
-.nav-ticker-dot {
-  width: 6px;
-  height: 6px;
-  background: #4ade80;
-  border-radius: 50%;
-  animation: blink 1.5s ease-in-out infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
-
 /* ── Hamburger ─────────────────────────────────────────── */
 .hamburger {
   display: none;

@@ -1438,9 +1438,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Index page ──
   if (page === 'index.html' || page === '') {
-    initTicker();
-    initHeroChart();
-    initMarketsSection();
     initFAQ();
     initContactForm();
     initNewsletterForms();

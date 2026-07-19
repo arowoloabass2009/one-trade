@@ -324,77 +324,6 @@
   color: #4ade80;
 }
 
-/* ── Markets Section ─────────────────────────────────────── */
-.markets-tabs {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 40px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 6px;
-  width: fit-content;
-}
-
-.market-tab {
-  padding: 10px 24px;
-  border-radius: 8px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.market-tab.active {
-  background: var(--gold-glass);
-  color: var(--gold);
-  border: 1px solid var(--border);
-}
-
-.market-tab:hover:not(.active) { color: var(--white); }
-
-.markets-table-card {
-  background: var(--grad-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-
-.markets-table-card table { }
-
-.market-row { cursor: pointer; }
-
-.market-symbol {
-  font-weight: 700;
-  color: var(--white);
-  font-family: var(--font-serif);
-  font-size: 0.92rem;
-}
-
-.market-name { color: var(--text-muted); font-size: 0.82rem; }
-
-.market-price {
-  font-weight: 700;
-  color: var(--text);
-  font-family: 'Courier New', monospace;
-}
-
-.market-change {
-  font-weight: 700;
-  font-size: 0.85rem;
-}
-
-.market-change.up   { color: #4ade80; }
-.market-change.down { color: #f87171; }
-
-.market-sparkline {
-  width: 80px;
-  height: 30px;
-}
-
 /* ── Blog Section ────────────────────────────────────────── */
 .blog-grid {
   display: grid;
@@ -852,26 +781,25 @@
 
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 1024px) {
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .plans-grid    { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+  .services-grid     { grid-template-columns: repeat(2, 1fr); }
+  .plans-grid        { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
   .plan-card.featured { transform: none; }
-  .why-grid      { grid-template-columns: 1fr; }
-  .why-float-card { display: none; }
-  .blog-grid     { grid-template-columns: repeat(2, 1fr); }
+  .why-grid          { grid-template-columns: 1fr; }
+  .why-float-card    { display: none; }
+  .blog-grid         { grid-template-columns: repeat(2, 1fr); }
   .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
-  .stats-row     { grid-template-columns: repeat(2, 1fr); }
-  .team-grid     { grid-template-columns: repeat(2, 1fr); }
-  .contact-grid  { grid-template-columns: 1fr; }
-  .cta-section   { padding: 60px 32px; margin: 0 16px; }
+  .stats-row         { grid-template-columns: repeat(2, 1fr); }
+  .team-grid         { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid      { grid-template-columns: 1fr; }
+  .cta-section       { padding: 60px 32px; margin: 0 16px; }
 }
 
 @media (max-width: 768px) {
-  .services-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
-  .blog-grid     { grid-template-columns: 1fr; }
+  .services-grid     { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+  .blog-grid         { grid-template-columns: 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
-  .team-grid     { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; }
-  .markets-tabs  { flex-wrap: wrap; width: 100%; }
-  .newsletter-form { flex-direction: column; }
-  .stats-row     { grid-template-columns: repeat(2, 1fr); }
-  .cta-section   { padding: 48px 24px; margin: 0; border-radius: var(--radius-lg); }
+  .team-grid         { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; }
+  .newsletter-form   { flex-direction: column; }
+  .stats-row         { grid-template-columns: repeat(2, 1fr); }
+  .cta-section       { padding: 48px 24px; margin: 0; border-radius: var(--radius-lg); }
 }

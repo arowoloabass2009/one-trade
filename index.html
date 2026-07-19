@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ONE-TRADE — World-Class Forex & Investment Platform</title>
-  <meta name="description" content="ONE-TRADE is your gateway to professional forex trading, stock investments, and financial intelligence. Expert insights, real-time markets, and proven strategies." />
+  <title>ONE-TRADE — Professional Forex & Investment Platform</title>
+  <meta name="description" content="ONE-TRADE delivers expert forex and stock investment services, financial intelligence, and proven wealth-building strategies for ambitious investors worldwide." />
   <meta property="og:title" content="ONE-TRADE — Professional Forex & Investment Platform" />
-  <meta property="og:description" content="Trade smarter with ONE-TRADE. Access forex, stocks, commodities and expert market intelligence." />
+  <meta property="og:description" content="Expert forex trading, stock investments, and financial intelligence. Built for professionals." />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,18 +37,13 @@
     </a>
     <div class="navbar-nav" id="navMenu">
       <a href="#home" class="nav-link active">Home</a>
-      <a href="#markets" class="nav-link">Markets</a>
-      <a href="#investments" class="nav-link">Investments</a>
       <a href="#services" class="nav-link">Services</a>
+      <a href="#investments" class="nav-link">Investments</a>
       <a href="#about" class="nav-link">About</a>
       <a href="blog.html" class="nav-link">Blog</a>
       <a href="#contact" class="nav-link">Contact</a>
     </div>
     <div class="navbar-actions" id="navActions">
-      <div class="nav-ticker-pill">
-        <span class="nav-ticker-dot"></span>
-        <span id="navLivePair">EUR/USD 1.0842</span>
-      </div>
       <a href="admin-login.html" class="btn btn-outline navbar-cta">Admin</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -114,7 +109,7 @@
         <div class="hero-chart-card">
           <div class="chart-header">
             <div class="chart-pair">
-              <span class="chart-pair-name" id="heroChartPair">EUR/USD</span>
+              <span class="chart-pair-name">EUR/USD</span>
               <span class="chart-pair-badge">LIVE</span>
             </div>
             <div class="chart-price">
@@ -122,7 +117,7 @@
               <div class="chart-price-change" id="heroChartChange">+0.0023 (+0.21%)</div>
             </div>
           </div>
-          <svg class="hero-chart-svg" viewBox="0 0 300 100" preserveAspectRatio="none" id="heroChartSvg">
+          <svg class="hero-chart-svg" viewBox="0 0 300 100" preserveAspectRatio="none">
             <defs>
               <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stop-color="#d4a017" stop-opacity="0.3"/>
@@ -132,7 +127,7 @@
             <path id="chartFill" fill="url(#chartGrad)"/>
             <path id="chartLine" fill="none" stroke="#d4a017" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <div class="hero-asset-list" id="heroAssetList">
+          <div class="hero-asset-list">
             <div class="hero-asset-row">
               <span class="hero-asset-name">GBP/USD</span>
               <div class="hero-asset-bar"><div class="hero-asset-bar-fill" style="width:72%"></div></div>
@@ -167,52 +162,44 @@
   </div>
 </section>
 
-<!-- LIVE TICKER -->
-<div class="ticker-bar" id="tickerBar">
-  <div class="ticker-inner" id="tickerInner">
-    <span class="ticker-label">LIVE</span>
-    <!-- populated by JS -->
-  </div>
-</div>
-
 <!-- SERVICES SECTION -->
 <section class="section" id="services">
   <div class="container">
     <div class="text-center reveal">
       <div class="section-label">⚡ What We Do</div>
-      <h2 class="section-title">Everything You Need to <span>Trade & Invest</span></h2>
-      <p class="section-subtitle">From forex trading to stock investments, commodities, crypto, and financial intelligence — ONE-TRADE is your complete professional platform.</p>
+      <h2 class="section-title">Everything You Need to <span>Invest & Grow</span></h2>
+      <p class="section-subtitle">Professional investment services for forex, stocks, and digital assets — tailored to your goals and risk appetite.</p>
     </div>
     <div class="services-grid">
       <div class="service-card reveal">
         <div class="service-icon">💱</div>
         <h3 class="service-title">Forex Trading</h3>
-        <p class="service-desc">Access 50+ major, minor, and exotic currency pairs with institutional-grade spreads and expert trade analysis from our seasoned forex desk.</p>
+        <p class="service-desc">Access major, minor, and exotic currency pairs with institutional-grade spreads and expert analysis from our seasoned forex desk.</p>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">📈</div>
         <h3 class="service-title">Stock Investments</h3>
-        <p class="service-desc">Invest in global equities — US, UK, African, and emerging markets — with portfolio guidance, fundamental analysis, and strategic positioning.</p>
+        <p class="service-desc">Invest in global equities — US, UK, African, and emerging markets — with portfolio guidance and fundamental analysis.</p>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">₿</div>
         <h3 class="service-title">Crypto Assets</h3>
-        <p class="service-desc">Navigate the digital asset space with confidence. BTC, ETH, altcoins, and DeFi opportunities assessed through our rigorous risk framework.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon">🥇</div>
-        <h3 class="service-title">Commodities</h3>
-        <p class="service-desc">Gold, silver, crude oil, natural gas — hedge your portfolio and capitalise on commodity cycles with ONE-TRADE's commodity intelligence.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon">🧠</div>
-        <h3 class="service-title">Market Intelligence</h3>
-        <p class="service-desc">Daily briefings, weekly analysis, economic calendar insights, and proprietary signals — stay ahead of every market move.</p>
+        <p class="service-desc">Navigate digital assets confidently. BTC, ETH, and select altcoins assessed through our rigorous risk framework.</p>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">🛡️</div>
         <h3 class="service-title">Risk Management</h3>
-        <p class="service-desc">Institutional-grade risk management frameworks, position sizing calculators, and drawdown protection strategies tailored to your profile.</p>
+        <p class="service-desc">Institutional-grade frameworks, position sizing, and drawdown protection strategies tailored to every client profile.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🧠</div>
+        <h3 class="service-title">Market Research</h3>
+        <p class="service-desc">Daily briefings, weekly analysis, and economic calendar insights — stay ahead of every major market move.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">💼</div>
+        <h3 class="service-title">Portfolio Management</h3>
+        <p class="service-desc">Fully managed, diversified portfolios built around your financial goals with transparent monthly reporting.</p>
       </div>
     </div>
   </div>
@@ -242,40 +229,6 @@
         <div class="stat-value" data-counter="97" data-suffix="%">0</div>
         <div class="stat-label">Client Satisfaction</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- MARKETS SECTION -->
-<section class="section" id="markets">
-  <div class="container">
-    <div class="text-center reveal">
-      <div class="section-label">📊 Live Markets</div>
-      <h2 class="section-title">Real-Time <span>Market Overview</span></h2>
-      <p class="section-subtitle">Monitor major forex pairs, stocks, commodities and crypto assets in real-time with ONE-TRADE's live market data feed.</p>
-    </div>
-    <div class="markets-tabs reveal">
-      <button class="market-tab active" data-market="forex">Forex</button>
-      <button class="market-tab" data-market="stocks">Stocks</button>
-      <button class="market-tab" data-market="crypto">Crypto</button>
-      <button class="market-tab" data-market="commodities">Commodities</button>
-    </div>
-    <div class="markets-table-card reveal">
-      <table>
-        <thead>
-          <tr>
-            <th>Symbol</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Change</th>
-            <th>24h %</th>
-            <th>Trend</th>
-          </tr>
-        </thead>
-        <tbody id="marketsTableBody">
-          <tr><td colspan="6" style="text-align:center;padding:48px"><div class="spinner"></div></td></tr>
-        </tbody>
-      </table>
     </div>
   </div>
 </section>
@@ -329,7 +282,6 @@
           <div class="plan-feature"><div class="plan-feature-check">✓</div>Weekly ROI payouts</div>
           <div class="plan-feature"><div class="plan-feature-check">✓</div>Full diversified portfolio</div>
           <div class="plan-feature"><div class="plan-feature-check">✓</div>Private fund manager</div>
-          <div class="plan-feature"><div class="plan-feature-check">✓</div>Proprietary trade signals</div>
           <div class="plan-feature"><div class="plan-feature-check">✓</div>VIP concierge service</div>
           <div class="plan-feature"><div class="plan-feature-check">✓</div>Custom risk framework</div>
         </div>

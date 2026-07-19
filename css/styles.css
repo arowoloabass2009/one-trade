@@ -650,3 +650,9 @@ tr:hover td { background: rgba(255,255,255,0.02); }
   .btn-lg { padding: 15px 28px; font-size: 0.95rem; }
   h1 { font-size: 2rem; }
 }
+
+/* ── Blink (used by hero badge dot) ─────────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
