@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="postMetaTitle">Loading Post — ONE-TRADE</title>
+  <meta name="description" id="postMetaDesc" content="Read market insights from ONE-TRADE." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/blog.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+<div id="page-loader">
+  <div class="loader-logo">ONE-TRADE</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">
+      <div class="brand-icon">OT</div>
+      <div class="brand-text">
+        <span class="brand-name">ONE-TRADE</span>
+        <span class="brand-tagline">Pro Investment Platform</span>
+      </div>
+    </a>
+    <div class="navbar-nav" id="navMenu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="index.html#markets" class="nav-link">Markets</a>
+      <a href="index.html#investments" class="nav-link">Investments</a>
+      <a href="blog.html" class="nav-link active">Blog</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+    </div>
+    <div class="navbar-actions" id="navActions">
+      <a href="admin-login.html" class="btn btn-outline navbar-cta">Admin</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- POST HERO -->
+<div class="blog-hero" id="postHero">
+  <div class="orb orb-gold" style="width:500px;height:500px;top:-150px;right:-100px;"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <div class="blog-hero-meta" id="postHeroMeta">
+      <a href="blog.html" style="color:var(--gold);font-size:0.85rem;font-weight:600;">← Back to Blog</a>
+    </div>
+    <div id="postHeroContent">
+      <div class="spinner" style="margin:40px auto"></div>
+    </div>
+  </div>
+</div>
+
+<!-- POST BODY -->
+<div class="container">
+  <div class="blog-post-layout" id="postLayout">
+    <div id="postArticleWrap">
+      <div class="spinner" style="margin:80px auto"></div>
+    </div>
+    <aside class="blog-sidebar" id="postSidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Recent Posts</div>
+        <div class="sidebar-post-list" id="sidebarRecentPosts">
+          <div class="spinner" style="margin:16px auto;"></div>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Categories</div>
+        <div class="sidebar-cats" id="sidebarCats">
+          <div class="sidebar-cat" data-cat="">All Articles</div>
+          <div class="sidebar-cat" data-cat="Forex">Forex <span class="sidebar-cat-count">—</span></div>
+          <div class="sidebar-cat" data-cat="Stocks">Stocks <span class="sidebar-cat-count">—</span></div>
+          <div class="sidebar-cat" data-cat="Crypto">Crypto <span class="sidebar-cat-count">—</span></div>
+          <div class="sidebar-cat" data-cat="Commodities">Commodities <span class="sidebar-cat-count">—</span></div>
+          <div class="sidebar-cat" data-cat="Market Insights">Insights <span class="sidebar-cat-count">—</span></div>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Newsletter</div>
+        <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:14px;line-height:1.6;">Get weekly market insights in your inbox — free.</p>
+        <input type="email" class="form-control" placeholder="Your email" id="sidebarEmail" style="margin-bottom:10px;font-size:0.85rem;" />
+        <button class="btn btn-primary" style="width:100%;justify-content:center;font-size:0.85rem;" id="sidebarSubBtn">Subscribe</button>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer" style="margin-top:80px;">
+  <div class="container">
+    <div style="padding:40px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;border-bottom:1px solid var(--border-light);">
+      <div class="footer-logo" style="gap:12px;">
+        <div class="footer-logo-icon">OT</div>
+        <div class="footer-logo-name">ONE-TRADE</div>
+      </div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;">
+        <a href="index.html" class="footer-bottom-link">Home</a>
+        <a href="blog.html" class="footer-bottom-link">Blog</a>
+        <a href="index.html#contact" class="footer-bottom-link">Contact</a>
+      </div>
+    </div>
+    <div style="padding:24px 0;text-align:center;">
+      <div class="footer-copyright">© 2025 <strong>ONE-TRADE</strong>. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/supabase.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

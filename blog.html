@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog & Market Insights — ONE-TRADE</title>
+  <meta name="description" content="Expert forex analysis, stock market insights, investment strategies and financial intelligence from ONE-TRADE professionals." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/blog.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+<div id="page-loader">
+  <div class="loader-logo">ONE-TRADE</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">
+      <div class="brand-icon">OT</div>
+      <div class="brand-text">
+        <span class="brand-name">ONE-TRADE</span>
+        <span class="brand-tagline">Pro Investment Platform</span>
+      </div>
+    </a>
+    <div class="navbar-nav" id="navMenu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="index.html#markets" class="nav-link">Markets</a>
+      <a href="index.html#investments" class="nav-link">Investments</a>
+      <a href="index.html#services" class="nav-link">Services</a>
+      <a href="index.html#about" class="nav-link">About</a>
+      <a href="blog.html" class="nav-link active">Blog</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+    </div>
+    <div class="navbar-actions" id="navActions">
+      <a href="admin-login.html" class="btn btn-outline navbar-cta">Admin</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- BLOG HERO -->
+<div class="blog-hero">
+  <div class="orb orb-gold" style="width:500px;height:500px;top:-150px;right:-100px;"></div>
+  <div class="orb orb-blue" style="width:400px;height:400px;bottom:-100px;left:-80px;"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <div class="section-label">📝 Market Intelligence</div>
+    <h1 class="blog-hero-title">Insights, Analysis &<br>Investment Intelligence</h1>
+    <p class="blog-hero-excerpt">Expert commentary, market analysis, trade strategies, and financial intelligence from the ONE-TRADE editorial and research team — updated daily.</p>
+    <!-- Search & Filter -->
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:32px;align-items:center;">
+      <input type="text" id="blogSearch" class="form-control" placeholder="Search articles..." style="max-width:320px;background:rgba(255,255,255,0.08);" />
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <button class="blog-filter-btn btn btn-sm btn-ghost active" data-cat="">All</button>
+        <button class="blog-filter-btn btn btn-sm btn-ghost" data-cat="Forex">Forex</button>
+        <button class="blog-filter-btn btn btn-sm btn-ghost" data-cat="Stocks">Stocks</button>
+        <button class="blog-filter-btn btn btn-sm btn-ghost" data-cat="Crypto">Crypto</button>
+        <button class="blog-filter-btn btn btn-sm btn-ghost" data-cat="Commodities">Commodities</button>
+        <button class="blog-filter-btn btn btn-sm btn-ghost" data-cat="Market Insights">Insights</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BLOG GRID -->
+<section class="section">
+  <div class="container">
+    <div class="blog-grid" id="blogGrid">
+      <div style="grid-column:1/-1;text-align:center;padding:80px"><div class="spinner"></div></div>
+    </div>
+    <div class="text-center" style="margin-top:48px;" id="loadMoreWrap">
+      <button class="btn btn-outline" id="loadMoreBtn" style="display:none;">Load More Articles</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div style="padding:40px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;border-bottom:1px solid var(--border-light);">
+      <div class="footer-logo" style="gap:12px;">
+        <div class="footer-logo-icon">OT</div>
+        <div class="footer-logo-name">ONE-TRADE</div>
+      </div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;">
+        <a href="index.html" class="footer-bottom-link">Home</a>
+        <a href="index.html#investments" class="footer-bottom-link">Investments</a>
+        <a href="index.html#contact" class="footer-bottom-link">Contact</a>
+        <a href="admin-login.html" class="footer-bottom-link">Admin</a>
+      </div>
+    </div>
+    <div style="padding:24px 0;text-align:center;">
+      <div class="footer-copyright">© 2025 <strong>ONE-TRADE</strong>. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/supabase.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

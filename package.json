@@ -1,0 +1,17 @@
+{
+  "name": "one-trade",
+  "version": "1.0.0",
+  "description": "ONE-TRADE — World-Class Forex & Stock Investment Platform",
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail --names \"TS,BS\" --prefix-colors \"yellow,cyan\" \"tsc --watch --preserveWatchOutput\" \"browser-sync start --config bs-config.json\"",
+    "build": "npx tsc",
+    "start": "browser-sync start --config bs-config.json"
+  },
+  "dependencies": {
+    "typescript": "5.4.5"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "concurrently": "^8.2.2"
+  }
+}

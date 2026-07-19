@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — ONE-TRADE</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin-body">
+<div id="page-loader">
+  <div class="loader-logo">ONE-TRADE</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<div class="admin-layout">
+  <!-- SIDEBAR -->
+  <aside class="admin-sidebar" id="adminSidebar">
+    <div class="admin-sidebar-header">
+      <div class="admin-logo">
+        <div class="admin-logo-icon">OT</div>
+        <div class="admin-logo-text">ONE-TRADE</div>
+      </div>
+      <div class="admin-sidebar-label">Admin Panel</div>
+    </div>
+    <nav class="admin-nav">
+      <div class="admin-nav-section-title">Overview</div>
+      <a class="admin-nav-link active" data-panel="dashboard">
+        <div class="admin-nav-link-icon">📊</div> Dashboard
+      </a>
+      <div class="admin-nav-section-title">Content</div>
+      <a class="admin-nav-link" data-panel="new-post">
+        <div class="admin-nav-link-icon">✍️</div> New Post
+      </a>
+      <a class="admin-nav-link" data-panel="posts">
+        <div class="admin-nav-link-icon">📝</div> All Posts
+      </a>
+      <a class="admin-nav-link" data-panel="comments">
+        <div class="admin-nav-link-icon">💬</div> Comments
+      </a>
+      <div class="admin-nav-section-title">Inbox</div>
+      <a class="admin-nav-link" data-panel="messages">
+        <div class="admin-nav-link-icon">📧</div> Messages
+      </a>
+      <a class="admin-nav-link" data-panel="subscribers">
+        <div class="admin-nav-link-icon">📬</div> Subscribers
+      </a>
+    </nav>
+    <div class="admin-sidebar-footer">
+      <a href="index.html" class="admin-nav-link" style="margin-bottom:8px;">
+        <div class="admin-nav-link-icon">🌐</div> View Site
+      </a>
+      <button class="admin-signout-btn" id="adminSignOutBtn">
+        🚪 Sign Out
+      </button>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <button class="admin-mobile-menu-btn" id="adminMenuBtn" aria-label="Open menu">☰</button>
+        <div class="admin-topbar-title" id="adminPageTitle">Dashboard</div>
+      </div>
+      <div class="admin-topbar-right">
+        <div class="admin-user-pill">👤 Admin</div>
+      </div>
+    </div>
+    <div class="admin-content" id="adminContent">
+      <!-- Panels injected by JS -->
+      <div class="spinner" style="margin:80px auto;"></div>
+    </div>
+  </main>
+</div>
+
+<script src="js/supabase.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

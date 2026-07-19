@@ -1,0 +1,3 @@
+@echo off
+echo Starting ONE-TRADE Development Server...
+npx concurrently --kill-others-on-fail --names "TS,BS" --prefix-colors "yellow,cyan" "npx tsc --watch --preserveWatchOutput" "npx browser-sync start --config bs-config.json"

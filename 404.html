@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — ONE-TRADE</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--grad-hero);
+      text-align: center;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .error-code {
+      font-size: clamp(6rem, 18vw, 14rem);
+      font-weight: 900;
+      color: transparent;
+      -webkit-text-stroke: 2px var(--gold);
+      line-height: 1;
+      letter-spacing: -0.06em;
+      margin-bottom: 16px;
+      opacity: 0.6;
+    }
+    .error-inner { position: relative; z-index: 1; max-width: 540px; }
+  </style>
+</head>
+<body>
+<nav class="navbar scrolled">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">
+      <div class="brand-icon">OT</div>
+      <div class="brand-text">
+        <span class="brand-name">ONE-TRADE</span>
+        <span class="brand-tagline">Pro Investment Platform</span>
+      </div>
+    </a>
+  </div>
+</nav>
+
+<div class="error-page">
+  <div class="orb orb-gold" style="width:600px;height:600px;top:-200px;right:-150px;"></div>
+  <div class="orb orb-blue" style="width:500px;height:500px;bottom:-100px;left:-100px;"></div>
+  <div class="error-inner">
+    <div class="error-code">404</div>
+    <h1 style="font-size:1.8rem;font-weight:800;color:var(--white);margin-bottom:16px;">Page Not Found</h1>
+    <p style="color:var(--text-muted);font-size:1rem;line-height:1.8;margin-bottom:36px;">
+      The page you're looking for doesn't exist or has been moved. Let's get you back on track.
+    </p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="index.html" class="btn btn-primary btn-lg">← Back to Home</a>
+      <a href="blog.html" class="btn btn-ghost btn-lg">View Blog</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

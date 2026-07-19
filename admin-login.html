@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Access — ONE-TRADE</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin-body">
+<div id="page-loader">
+  <div class="loader-logo">ONE-TRADE</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<div class="admin-login-page">
+  <div class="orb orb-gold" style="width:500px;height:500px;top:-150px;left:-100px;"></div>
+  <div class="orb orb-blue" style="width:400px;height:400px;bottom:-100px;right:-80px;"></div>
+
+  <div class="admin-login-card">
+    <div class="admin-login-logo">
+      <div class="admin-login-logo-icon">🔐</div>
+      <h1 class="admin-login-title">Admin Access</h1>
+      <p class="admin-login-subtitle">ONE-TRADE Control Panel — Authorised Personnel Only</p>
+    </div>
+
+    <form id="adminLoginForm">
+      <div class="form-group">
+        <label class="form-label">Admin Passcode</label>
+        <input
+          type="password"
+          name="passcode"
+          class="form-control passcode-input"
+          placeholder="••••••••"
+          data-validate="required"
+          data-label="Passcode"
+          autocomplete="current-password"
+          autofocus
+        />
+      </div>
+      <div style="margin-bottom:16px;">
+        <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:0.85rem;color:var(--text-muted);">
+          <input type="checkbox" id="showPasscode" style="width:16px;height:16px;accent-color:var(--gold);">
+          Show passcode
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;" id="loginBtn">
+        Access Admin Panel
+      </button>
+    </form>
+
+    <div style="margin-top:24px;text-align:center;">
+      <a href="index.html" style="font-size:0.82rem;color:var(--text-muted);">← Back to ONE-TRADE</a>
+    </div>
+  </div>
+</div>
+
+<script src="js/supabase.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

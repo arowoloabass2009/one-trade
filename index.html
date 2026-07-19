@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ONE-TRADE — World-Class Forex & Investment Platform</title>
+  <meta name="description" content="ONE-TRADE is your gateway to professional forex trading, stock investments, and financial intelligence. Expert insights, real-time markets, and proven strategies." />
+  <meta property="og:title" content="ONE-TRADE — Professional Forex & Investment Platform" />
+  <meta property="og:description" content="Trade smarter with ONE-TRADE. Access forex, stocks, commodities and expert market intelligence." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+<!-- PAGE LOADER -->
+<div id="page-loader">
+  <div class="loader-logo">ONE-TRADE</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">
+      <div class="brand-icon">OT</div>
+      <div class="brand-text">
+        <span class="brand-name">ONE-TRADE</span>
+        <span class="brand-tagline">Pro Investment Platform</span>
+      </div>
+    </a>
+    <div class="navbar-nav" id="navMenu">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#markets" class="nav-link">Markets</a>
+      <a href="#investments" class="nav-link">Investments</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <div class="navbar-actions" id="navActions">
+      <div class="nav-ticker-pill">
+        <span class="nav-ticker-dot"></span>
+        <span id="navLivePair">EUR/USD 1.0842</span>
+      </div>
+      <a href="admin-login.html" class="btn btn-outline navbar-cta">Admin</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="hero-bg-grid"></div>
+    <div class="orb orb-gold hero-orb-1" style="width:700px;height:700px;top:-200px;right:-150px;"></div>
+    <div class="orb orb-blue hero-orb-2" style="width:500px;height:500px;bottom:-100px;left:-100px;"></div>
+    <div class="orb orb-gold hero-orb-3" style="width:300px;height:300px;top:40%;left:30%;opacity:0.5;"></div>
+    <div id="heroParticles" style="position:absolute;inset:0;overflow:hidden;pointer-events:none;"></div>
+  </div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Live Markets &bull; Professional Trading
+        </div>
+        <h1 class="hero-title">
+          Trade Smarter.<br>
+          <span class="hero-title-gold">Invest Wiser.</span><br>
+          Prosper Longer.
+        </h1>
+        <p class="hero-subtitle">
+          ONE-TRADE delivers institutional-grade forex and stock investment services, 
+          expert market intelligence, and a world-class trading ecosystem — built for 
+          professionals and ambitious investors alike.
+        </p>
+        <div class="hero-actions">
+          <a href="#investments" class="btn btn-primary btn-lg">
+            <span>Explore Investments</span>
+            <span>→</span>
+          </a>
+          <a href="blog.html" class="btn btn-ghost btn-lg">
+            <span>Market Insights</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat-item">
+            <div class="hero-stat-value" data-counter="8400" data-suffix="+">0+</div>
+            <div class="hero-stat-label">Active Investors</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-value" data-prefix="$" data-counter="240" data-suffix="M+">$0M+</div>
+            <div class="hero-stat-label">Volume Traded</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-value" data-counter="97" data-suffix="%">0%</div>
+            <div class="hero-stat-label">Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-float-badge hero-float-badge-1">
+          <span>↑</span> EUR/USD +0.21% Today
+        </div>
+        <div class="hero-chart-card">
+          <div class="chart-header">
+            <div class="chart-pair">
+              <span class="chart-pair-name" id="heroChartPair">EUR/USD</span>
+              <span class="chart-pair-badge">LIVE</span>
+            </div>
+            <div class="chart-price">
+              <div class="chart-price-value" id="heroChartPrice">1.0842</div>
+              <div class="chart-price-change" id="heroChartChange">+0.0023 (+0.21%)</div>
+            </div>
+          </div>
+          <svg class="hero-chart-svg" viewBox="0 0 300 100" preserveAspectRatio="none" id="heroChartSvg">
+            <defs>
+              <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#d4a017" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#d4a017" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path id="chartFill" fill="url(#chartGrad)"/>
+            <path id="chartLine" fill="none" stroke="#d4a017" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="hero-asset-list" id="heroAssetList">
+            <div class="hero-asset-row">
+              <span class="hero-asset-name">GBP/USD</span>
+              <div class="hero-asset-bar"><div class="hero-asset-bar-fill" style="width:72%"></div></div>
+              <span class="hero-asset-price">1.2714</span>
+              <span class="hero-asset-change down">-0.32%</span>
+            </div>
+            <div class="hero-asset-row">
+              <span class="hero-asset-name">BTC/USD</span>
+              <div class="hero-asset-bar"><div class="hero-asset-bar-fill" style="width:88%"></div></div>
+              <span class="hero-asset-price">67,842</span>
+              <span class="hero-asset-change up">+1.26%</span>
+            </div>
+            <div class="hero-asset-row">
+              <span class="hero-asset-name">GOLD</span>
+              <div class="hero-asset-bar"><div class="hero-asset-bar-fill" style="width:65%"></div></div>
+              <span class="hero-asset-price">2,342</span>
+              <span class="hero-asset-change up">+0.37%</span>
+            </div>
+            <div class="hero-asset-row">
+              <span class="hero-asset-name">AAPL</span>
+              <div class="hero-asset-bar"><div class="hero-asset-bar-fill" style="width:55%"></div></div>
+              <span class="hero-asset-price">189.30</span>
+              <span class="hero-asset-change up">+1.14%</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-float-badge hero-float-badge-2">
+          <span>★</span> 97% Client Satisfaction
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE TICKER -->
+<div class="ticker-bar" id="tickerBar">
+  <div class="ticker-inner" id="tickerInner">
+    <span class="ticker-label">LIVE</span>
+    <!-- populated by JS -->
+  </div>
+</div>
+
+<!-- SERVICES SECTION -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">⚡ What We Do</div>
+      <h2 class="section-title">Everything You Need to <span>Trade & Invest</span></h2>
+      <p class="section-subtitle">From forex trading to stock investments, commodities, crypto, and financial intelligence — ONE-TRADE is your complete professional platform.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">💱</div>
+        <h3 class="service-title">Forex Trading</h3>
+        <p class="service-desc">Access 50+ major, minor, and exotic currency pairs with institutional-grade spreads and expert trade analysis from our seasoned forex desk.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">📈</div>
+        <h3 class="service-title">Stock Investments</h3>
+        <p class="service-desc">Invest in global equities — US, UK, African, and emerging markets — with portfolio guidance, fundamental analysis, and strategic positioning.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">₿</div>
+        <h3 class="service-title">Crypto Assets</h3>
+        <p class="service-desc">Navigate the digital asset space with confidence. BTC, ETH, altcoins, and DeFi opportunities assessed through our rigorous risk framework.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🥇</div>
+        <h3 class="service-title">Commodities</h3>
+        <p class="service-desc">Gold, silver, crude oil, natural gas — hedge your portfolio and capitalise on commodity cycles with ONE-TRADE's commodity intelligence.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🧠</div>
+        <h3 class="service-title">Market Intelligence</h3>
+        <p class="service-desc">Daily briefings, weekly analysis, economic calendar insights, and proprietary signals — stay ahead of every market move.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🛡️</div>
+        <h3 class="service-title">Risk Management</h3>
+        <p class="service-desc">Institutional-grade risk management frameworks, position sizing calculators, and drawdown protection strategies tailored to your profile.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS SECTION -->
+<section class="section section-alt" id="stats">
+  <div class="container">
+    <div class="stats-row reveal">
+      <div class="stat-item">
+        <span class="stat-icon">👥</span>
+        <div class="stat-value" data-counter="8400" data-suffix="+">0</div>
+        <div class="stat-label">Active Investors</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-icon">💰</span>
+        <div class="stat-value" data-prefix="$" data-counter="240" data-suffix="M+">$0</div>
+        <div class="stat-label">Total Volume Managed</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-icon">🌍</span>
+        <div class="stat-value" data-counter="47" data-suffix="+">0</div>
+        <div class="stat-label">Countries Served</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-icon">⭐</span>
+        <div class="stat-value" data-counter="97" data-suffix="%">0</div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETS SECTION -->
+<section class="section" id="markets">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">📊 Live Markets</div>
+      <h2 class="section-title">Real-Time <span>Market Overview</span></h2>
+      <p class="section-subtitle">Monitor major forex pairs, stocks, commodities and crypto assets in real-time with ONE-TRADE's live market data feed.</p>
+    </div>
+    <div class="markets-tabs reveal">
+      <button class="market-tab active" data-market="forex">Forex</button>
+      <button class="market-tab" data-market="stocks">Stocks</button>
+      <button class="market-tab" data-market="crypto">Crypto</button>
+      <button class="market-tab" data-market="commodities">Commodities</button>
+    </div>
+    <div class="markets-table-card reveal">
+      <table>
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Change</th>
+            <th>24h %</th>
+            <th>Trend</th>
+          </tr>
+        </thead>
+        <tbody id="marketsTableBody">
+          <tr><td colspan="6" style="text-align:center;padding:48px"><div class="spinner"></div></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTMENT PLANS -->
+<section class="section section-alt" id="investments">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">💎 Investment Plans</div>
+      <h2 class="section-title">Choose Your <span>Investment Track</span></h2>
+      <p class="section-subtitle">From conservative portfolios to high-growth strategies — ONE-TRADE has a managed investment plan for every risk appetite and financial goal.</p>
+    </div>
+    <div class="plans-grid">
+      <div class="plan-card reveal">
+        <div class="plan-name">Starter Plan</div>
+        <div class="plan-roi">12%<span> / year</span></div>
+        <div class="plan-period">Conservative · Low Risk</div>
+        <div class="plan-divider"></div>
+        <div class="plan-features">
+          <div class="plan-feature"><div class="plan-feature-check">✓</div>Min. deposit: $500</div>
+          <div class="plan-feature"><div class="plan-feature-check">✓</div>Monthly ROI payouts</div>
+          <div class="plan-feature"><div class="plan-feature-check">✓</div>Forex & Bonds portfolio</div>
+          <div class="plan-feature"><div class="plan-feature-check">✓</div>Dedicated account manager</div>
+          <div class="plan-feature"><div class="plan-feature-check">✓</div>Weekly market reports</div>
+        </div>
+        <a href="#contact" class="btn btn-outline plan-cta">Get Started</a>
+      </div>
+      <div class="plan-card featured reveal">
+        <div class="plan-featured-badge">Most Popular</div>
+        <div class="plan-name">Growth Plan</div>
+        <div class="plan-roi">28%<span> / year</span></div>
+        <div class="plan-period">Balanced · Medium Risk</div>
+        <div class="plan-divider"></div>
+        <div class="plan-features">
+          <div class="plan-feature"><div class="plan-feature-check">✓</div>Min. deposit: $2,500</div>
+          <div class="plan-feature"><div class="plan-feature-check">✓</div>Bi-weekly ROI payouts</div>
+          <div class="plan-feature"><div class="plan-feature-check">✓</div>Forex, Stocks & Crypto</div>
+          <div class="plan-feature"><div class="plan-feature-check">✓</div>Senior portfolio manager</div>
+          <div class="plan-feature"><div class="plan-feature-check">✓</div>Daily market intelligence</div>
+          <div class="plan-feature"><div class="plan-feature-check">✓</div>Priority support 24/7</div>
+        </div>
+        <a href="#contact" class="btn btn-primary plan-cta">Get Started</a>
+      </div>
+      <div class="plan-card reveal">
+        <div class="plan-name">Elite Plan</div>
+        <div class="plan-roi">45%<span> / year</span></div>
+        <div class="plan-period">Aggressive · High Growth</div>
+        <div class="plan-divider"></div>
+        <div class="plan-features">
+          <div class="plan-feature"><div class="plan-feature-check">✓</div>Min. deposit: $10,000</div>
+          <div class="plan-feature"><div class="plan-feature-check">✓</div>Weekly ROI payouts</div>
+          <div class="plan-feature"><div class="plan-feature-check">✓</div>Full diversified portfolio</div>
+          <div class="plan-feature"><div class="plan-feature-check">✓</div>Private fund manager</div>
+          <div class="plan-feature"><div class="plan-feature-check">✓</div>Proprietary trade signals</div>
+          <div class="plan-feature"><div class="plan-feature-check">✓</div>VIP concierge service</div>
+          <div class="plan-feature"><div class="plan-feature-check">✓</div>Custom risk framework</div>
+        </div>
+        <a href="#contact" class="btn btn-outline plan-cta">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ONE-TRADE -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-content reveal-left">
+        <div class="section-label">🏆 Why ONE-TRADE</div>
+        <h2 class="section-title">The Professional Edge <span>You Deserve</span></h2>
+        <p style="color:var(--text-muted);line-height:1.8;margin-bottom:8px;">
+          ONE-TRADE was founded by seasoned market professionals with decades of combined experience across institutional banks, hedge funds, and proprietary trading desks.
+        </p>
+        <div class="why-features">
+          <div class="why-feature">
+            <div class="why-feature-icon">🔍</div>
+            <div>
+              <div class="why-feature-title">Deep Market Research</div>
+              <div class="why-feature-desc">Our analysts monitor every global market 24/5, delivering actionable intelligence before the crowd catches on.</div>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon">⚡</div>
+            <div>
+              <div class="why-feature-title">Execution Speed</div>
+              <div class="why-feature-desc">Lightning-fast trade execution with minimal slippage — because in markets, milliseconds can mean the difference between profit and loss.</div>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon">🔒</div>
+            <div>
+              <div class="why-feature-title">Capital Security</div>
+              <div class="why-feature-desc">Institutional-grade security protocols, segregated client accounts, and comprehensive risk safeguards protect your capital.</div>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon">📱</div>
+            <div>
+              <div class="why-feature-title">24/7 Expert Support</div>
+              <div class="why-feature-desc">Our dedicated support team and account managers are always available to help with queries, strategy, and portfolio reviews.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-visual reveal-right">
+        <div class="why-stats-panel">
+          <div class="why-stat-row">
+            <span class="why-stat-label">Average Annual Return</span>
+            <span class="why-stat-value">+34.8%</span>
+          </div>
+          <div class="why-stat-row">
+            <span class="why-stat-label">Win Rate (2024)</span>
+            <span class="why-stat-value">78.4%</span>
+          </div>
+          <div class="why-stat-row">
+            <span class="why-stat-label">Max Drawdown (Managed)</span>
+            <span class="why-stat-value">-4.2%</span>
+          </div>
+          <div class="why-stat-row">
+            <span class="why-stat-label">Years in Operation</span>
+            <span class="why-stat-value">8+ Years</span>
+          </div>
+          <div class="why-stat-row">
+            <span class="why-stat-label">Regulatory Compliance</span>
+            <span class="why-stat-value">100%</span>
+          </div>
+        </div>
+        <div class="why-float-card">
+          <div class="why-float-card-title">This Month's Return</div>
+          <div class="why-float-card-value">+7.4%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM SECTION -->
+<section class="section section-alt" id="team">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">👔 Our Team</div>
+      <h2 class="section-title">The Experts <span>Behind ONE-TRADE</span></h2>
+      <p class="section-subtitle">Seasoned professionals from top-tier financial institutions, combined with next-gen technology talent.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-avatar">SM</div>
+        <div class="team-name">Samuel Okafor</div>
+        <div class="team-role">Chief Executive Officer</div>
+        <div class="team-bio">15+ years at Goldman Sachs and JP Morgan. Specialist in emerging market currencies and macro trading strategies.</div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">AK</div>
+        <div class="team-name">Amara Kofi</div>
+        <div class="team-role">Chief Investment Officer</div>
+        <div class="team-bio">Former hedge fund PM with $2B+ AUM. Expert in global equities, quantitative strategies, and portfolio optimisation.</div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">DI</div>
+        <div class="team-name">Daniel Ibrahim</div>
+        <div class="team-role">Head of Forex</div>
+        <div class="team-bio">10+ years institutional forex trading. Former Deutsche Bank senior trader with deep expertise in G10 and EM pairs.</div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">ZA</div>
+        <div class="team-name">Zara Adeleke</div>
+        <div class="team-role">Head of Research</div>
+        <div class="team-bio">PhD Economics, Oxford. Specialises in macroeconomic analysis, central bank policy, and geopolitical market impact.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG SECTION -->
+<section class="section" id="blog">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">📝 Insights & Analysis</div>
+      <h2 class="section-title">Market Intelligence <span>Blog</span></h2>
+      <p class="section-subtitle">Expert analysis, trading strategies, market news, and investment insights — published by the ONE-TRADE editorial team.</p>
+    </div>
+    <div class="blog-grid" id="homeBlogGrid">
+      <div style="grid-column:1/-1;text-align:center;padding:48px"><div class="spinner"></div></div>
+    </div>
+    <div class="text-center" style="margin-top:48px;reveal">
+      <a href="blog.html" class="btn btn-outline btn-lg">View All Articles →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section-alt" id="testimonials">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">💬 Testimonials</div>
+      <h2 class="section-title">What Our <span>Investors Say</span></h2>
+      <p class="section-subtitle">Real results from real investors. The ONE-TRADE community spans 47 countries.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">ONE-TRADE transformed my approach to investing. The expert guidance, transparent reporting, and consistent returns have exceeded every expectation I had going in.</p>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">JA</div>
+          <div>
+            <div class="testimonial-name">James Adeyemi</div>
+            <div class="testimonial-role">Private Investor · Lagos</div>
+          </div>
+          <div class="testimonial-stars">★★★★★</div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">The Elite Plan has delivered remarkable results. My portfolio grew 43% last year — a figure I couldn't have imagined with traditional wealth managers.</p>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">SR</div>
+          <div>
+            <div class="testimonial-name">Sophie Ramos</div>
+            <div class="testimonial-role">Business Owner · London</div>
+          </div>
+          <div class="testimonial-stars">★★★★★</div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">As a first-time forex investor, I was nervous. The ONE-TRADE team held my hand through everything — the education, the strategy, and the results speak for themselves.</p>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">KM</div>
+          <div>
+            <div class="testimonial-name">Kwame Mensah</div>
+            <div class="testimonial-role">Engineer · Accra</div>
+          </div>
+          <div class="testimonial-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">❓ FAQ</div>
+      <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+      <p class="section-subtitle">Everything you need to know about ONE-TRADE investment services.</p>
+    </div>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item reveal">
+        <div class="faq-question" data-faq>How does ONE-TRADE's managed investment work? <span class="faq-chevron">▾</span></div>
+        <div class="faq-answer">Our expert fund managers handle all trade execution and portfolio management on your behalf. You deposit funds, choose your plan, and receive regular ROI payouts while our team actively manages your portfolio using proven strategies.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question" data-faq>What is the minimum investment amount? <span class="faq-chevron">▾</span></div>
+        <div class="faq-answer">Our Starter Plan begins at just $500 USD, making professional investment accessible to everyone. The Growth Plan starts at $2,500 and our Elite Plan at $10,000 for clients seeking maximum returns.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question" data-faq>How often are returns paid out? <span class="faq-chevron">▾</span></div>
+        <div class="faq-answer">Payouts vary by plan — monthly for Starter, bi-weekly for Growth, and weekly for Elite clients. All payouts are processed reliably and transparently to your designated account.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question" data-faq>Is my capital safe with ONE-TRADE? <span class="faq-chevron">▾</span></div>
+        <div class="faq-answer">Client capital is held in segregated accounts, separate from operational funds. We maintain strict risk management protocols, maximum drawdown limits, and comprehensive compliance procedures to protect your investment.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question" data-faq>Can I withdraw my investment at any time? <span class="faq-chevron">▾</span></div>
+        <div class="faq-answer">Yes. Withdrawals are processed within 2–5 business days. Notice periods may apply depending on your plan, and our team will guide you through the process. We believe in full transparency and client flexibility.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="cta-section reveal">
+      <div class="orb orb-gold" style="width:600px;height:600px;top:-100px;left:-100px;"></div>
+      <div class="cta-inner">
+        <div class="section-label" style="margin:0 auto 20px;">🚀 Get Started</div>
+        <h2 class="section-title">Ready to Start Your <span>Investment Journey?</span></h2>
+        <p style="color:var(--text-muted);font-size:1.05rem;line-height:1.8;">
+          Join thousands of investors who trust ONE-TRADE with their financial future. Contact our team today and let's build your wealth together.
+        </p>
+        <div class="cta-actions">
+          <a href="#contact" class="btn btn-primary btn-lg">Contact Our Team</a>
+          <a href="#investments" class="btn btn-ghost btn-lg">View Investment Plans</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">📞 Contact Us</div>
+      <h2 class="section-title">Let's Start a <span>Conversation</span></h2>
+      <p class="section-subtitle">Reach out to our expert team. We respond within 2 business hours.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal-left">
+        <p style="color:var(--text-muted);line-height:1.8;margin-bottom:8px;">
+          Whether you're ready to invest, have questions about our services, or want to explore a tailored strategy — we're here to help. Our advisors are available 24/5.
+        </p>
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📧</div>
+            <div>
+              <div class="contact-info-label">Email</div>
+              <div class="contact-info-value">invest@one-trade.com</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📱</div>
+            <div>
+              <div class="contact-info-label">WhatsApp / Phone</div>
+              <div class="contact-info-value">+234 800 ONE TRADE</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">🌍</div>
+            <div>
+              <div class="contact-info-label">Office</div>
+              <div class="contact-info-value">Lagos · London · Dubai</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">🕐</div>
+            <div>
+              <div class="contact-info-label">Trading Hours</div>
+              <div class="contact-info-value">Mon–Fri: 00:00–23:59 UTC</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="card" style="padding:40px;">
+          <h3 style="color:var(--white);margin-bottom:28px;font-size:1.2rem;">Send Us a Message</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label class="form-label">Full Name *</label>
+              <input type="text" name="name" class="form-control" placeholder="Your full name" data-validate="required" data-label="Name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address *</label>
+              <input type="email" name="email" class="form-control" placeholder="your@email.com" data-validate="required|email" data-label="Email" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Subject</label>
+              <select name="subject" class="form-control">
+                <option value="Investment Enquiry">Investment Enquiry</option>
+                <option value="Forex Trading">Forex Trading</option>
+                <option value="Portfolio Review">Portfolio Review</option>
+                <option value="Withdrawal Request">Withdrawal Request</option>
+                <option value="General">General Enquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message *</label>
+              <textarea name="message" class="form-control" rows="4" placeholder="Tell us about your investment goals..." data-validate="required" data-label="Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section" id="newsletter">
+  <div class="container text-center">
+    <div class="reveal">
+      <div class="section-label">📬 Newsletter</div>
+      <h2 class="section-title">Get <span>Market Insights</span> in Your Inbox</h2>
+      <p class="section-subtitle">Join 8,000+ investors receiving our weekly market analysis, trade ideas, and investment tips — free.</p>
+      <form class="newsletter-form" id="newsletterForm" style="justify-content:center;">
+        <input type="email" name="email" class="form-control" placeholder="Enter your email address" style="max-width:360px;" />
+        <button type="submit" class="btn btn-primary">Subscribe Free</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon">OT</div>
+          <div class="footer-logo-name">ONE-TRADE</div>
+        </div>
+        <p class="footer-desc">ONE-TRADE is a world-class forex and stock investment platform delivering institutional-grade trading services, expert market intelligence, and proven wealth-building strategies to investors worldwide.</p>
+        <div class="footer-badges">
+          <div class="footer-badge"><span class="footer-badge-icon">🛡️</span>SEC Compliant</div>
+          <div class="footer-badge"><span class="footer-badge-icon">🔒</span>SSL Secured</div>
+          <div class="footer-badge"><span class="footer-badge-icon">✅</span>Regulated</div>
+        </div>
+        <div class="footer-socials">
+          <div class="footer-social" title="Twitter/X">𝕏</div>
+          <div class="footer-social" title="LinkedIn">in</div>
+          <div class="footer-social" title="Telegram">✈</div>
+          <div class="footer-social" title="WhatsApp">W</div>
+          <div class="footer-social" title="YouTube">▶</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <div class="footer-links">
+          <a href="#services" class="footer-link"><span class="footer-link-arrow">›</span>Forex Trading</a>
+          <a href="#services" class="footer-link"><span class="footer-link-arrow">›</span>Stock Investments</a>
+          <a href="#services" class="footer-link"><span class="footer-link-arrow">›</span>Crypto Assets</a>
+          <a href="#services" class="footer-link"><span class="footer-link-arrow">›</span>Commodities</a>
+          <a href="#services" class="footer-link"><span class="footer-link-arrow">›</span>Risk Management</a>
+          <a href="#services" class="footer-link"><span class="footer-link-arrow">›</span>Market Intelligence</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Company</div>
+        <div class="footer-links">
+          <a href="#about" class="footer-link"><span class="footer-link-arrow">›</span>About ONE-TRADE</a>
+          <a href="#team" class="footer-link"><span class="footer-link-arrow">›</span>Our Team</a>
+          <a href="#investments" class="footer-link"><span class="footer-link-arrow">›</span>Investment Plans</a>
+          <a href="blog.html" class="footer-link"><span class="footer-link-arrow">›</span>Blog & Insights</a>
+          <a href="#contact" class="footer-link"><span class="footer-link-arrow">›</span>Contact Us</a>
+          <a href="#faq" class="footer-link"><span class="footer-link-arrow">›</span>FAQ</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Legal</div>
+        <div class="footer-links">
+          <a href="privacy.html" class="footer-link"><span class="footer-link-arrow">›</span>Privacy Policy</a>
+          <a href="terms.html" class="footer-link"><span class="footer-link-arrow">›</span>Terms of Service</a>
+          <a href="risk-disclosure.html" class="footer-link"><span class="footer-link-arrow">›</span>Risk Disclosure</a>
+          <a href="terms.html#aml" class="footer-link"><span class="footer-link-arrow">›</span>AML Policy</a>
+          <a href="privacy.html#cookies" class="footer-link"><span class="footer-link-arrow">›</span>Cookie Policy</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Newsletter</div>
+        <div class="footer-newsletter-title">Get weekly market analysis and trade ideas delivered free.</div>
+        <div class="footer-newsletter-form">
+          <input type="email" class="footer-newsletter-input" placeholder="Your email address" id="footerEmailInput" />
+          <button class="footer-newsletter-btn" id="footerSubBtn">Subscribe →</button>
+        </div>
+      </div>
+    </div>
+    <div class="risk-disclosure">
+      <strong>⚠ Risk Warning</strong>
+      Trading forex, stocks, and other financial instruments involves substantial risk of loss and is not suitable for all investors. Past performance is not indicative of future results. ONE-TRADE does not guarantee profits. Please ensure you fully understand the risks involved and seek independent financial advice if necessary.
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <div class="footer-copyright">© 2025 <strong>ONE-TRADE</strong>. All rights reserved.</div>
+        <div class="footer-legal">ONE-TRADE is a registered investment advisory firm. Services are provided in compliance with applicable financial regulations. Not available in all jurisdictions.</div>
+      </div>
+      <div class="footer-bottom-links">
+        <a href="privacy.html" class="footer-bottom-link">Privacy</a>
+        <a href="terms.html" class="footer-bottom-link">Terms</a>
+        <a href="risk-disclosure.html" class="footer-bottom-link">Risk</a>
+        <a href="admin-login.html" class="footer-bottom-link">Admin</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/supabase.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
